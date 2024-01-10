@@ -51,6 +51,7 @@ body{
 
 .home-content{
     max-width: 600px;
+    text-align: center;
 }
 
 .home-content h0{
@@ -84,6 +85,14 @@ body{
     height: 50px;
 }
 
+.btn-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 .btn-box a{
     position: relative;
     display: inline-flex;
@@ -106,7 +115,6 @@ body{
 
 .btn-box a:hover{
     color: #00abf0;
-
 }
 
 
@@ -226,7 +234,7 @@ body{
     background-size: cover;
     background-position: center;
     display: flex;
-    align-items: center;
+    align-items:center;
     padding: 0 10%;
 }
 
@@ -248,6 +256,7 @@ body{
     margin-left: auto;
     display: flex;
     flex-wrap: wrap;
+    align-content: end;
 }
 
 .skills li{
