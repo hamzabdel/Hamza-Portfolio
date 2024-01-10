@@ -19,29 +19,9 @@ body{
     padding: 20px 10%;
     background: transparent;
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     align-items: center;
     z-index: 100;
-}
-
-.logo{
-    positioN: relative;
-    font-size: 25pz;
-    color: #ededed;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.logo::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: #1e1c29;
-    animation: showRight 1s ease forwards;
-    animation-delay: .4s;
 }
 
 .navbar a{
@@ -60,16 +40,24 @@ body{
 
 .home{
     height:100vh;
-    background: url('image.jpg')no-repeat;
+    background-image: url('image.jpg');
     background-size: color;
     background-position: center;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 0 10%;
 }
 
 .home-content{
     max-width: 600px;
+}
+
+.home-content h0{
+    font-family:'Courier New', Courier, monospace;
+    font-size:30px;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
 .home-content h1{
@@ -123,7 +111,7 @@ body{
 
 
 .btn-box a:nth-child(2){
-    background: transparent;
+    background: #081b29;
     color: #00abf0;
 }
 
@@ -166,7 +154,7 @@ body{
     align-items: center;
     width: 40px;
     height: 40px;
-    background: transparent;
+    background: #081b29;
     border: 2px solid #00abf0;
     border-radius: 50%;
     font-size: 20px;
@@ -202,4 +190,67 @@ body{
     100% {
         width: 0;
     }
+}
+
+.about{
+    height:100vh;
+    background-image: url('about.jpg');
+    background-size: color;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.about-content{
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.about h4{
+    font-size: 56px;
+    font-weight: 700;
+    color: #00abf0;
+    line-height: 1.2;
+}
+
+.about p{
+    font-size: 16px;
+    margin: 20px 0 40px;
+} 
+
+.skills{
+    height:100vh;
+    background-color: #3b3982;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.skills-content{
+    max-width: 600px;
+    margin-right: auto;
+}
+
+.skills h5{
+    font-size: 56px;
+    font-weight: 700;
+    color: white;
+    text-decoration: underline;
+}
+
+.skills ul{
+    padding:20px;
+    font-size: 25px;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills li{
+    width: 50%;
+    box-sizing: border-box;
 }

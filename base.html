@@ -8,22 +8,23 @@
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 <body>
     
 <header class="header">
-<a href="#" class="logo">Hamza.</a>
 <nav class="navbar">
-    <a href="#" class="active">Home</a>
-    <a href="#">About</a>
-    <a href="#">Skills</a>
-    <a href="#">Portfolio</a>
-    <a href="#">Contact</a>
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
 </nav>
 </header>
 
-<section class="home">
+<section id="home" class="home">
     <div class="home-content">
+        <h0>hello world.</h0>
         <h1>Hamza Abdelfattah.</h1>
         <h3>Fullstack Developer</h3>
         <p>As a junior currently attending University as an undergraduate, I am passionately pursuing
@@ -32,9 +33,8 @@
             world of software development.
         </p>
         <div class="btn-box">
-            <a href="#">Hire Me</a>
+            <a href="#">Resume</a>
             <a href="#">Let's Talk</a>
-
         </div>
     </div>
 
@@ -43,5 +43,77 @@
         <a href="https://github.com/hamzabdel" target="_blank"><i class='bx bxl-github' ></i></a>
     </div>
 </section>
+
+<section id="about" class="about">
+    <div class="about-content">
+        <h4>About Me</h4>
+        <p>Hello there! I'm a passionate and driven junior at California State University, Fullerton, majoring in Computer Science. My academic journey
+            took an exciting turn when I transitioned from a Public Health major to pursue my true passion for technology and anything in the same realm.
+            I've been actively engaged in creating projects both within my coursework as well as during my free time. 
+        </p>
+        <p>
+            As a junior, I'm enthusiastic about expanding my knowledge and skills in computer science. My experiences in various different projects have 
+            equipped me with a solid foundation, and I'm now on the lookout for any internship and work opportunities to enhance my skills. I do believe that
+            hands-on experience is invaluable, and I am committed to gaining practical insights that will contribute to my growth as a professional.
+        </p>
+        <p>
+            Join me on my journey as I navigate the ever-evolving landscape of technology and strive to make meaningful contributions in the field. Let's connect
+            and explore the exciting possibilities that lie ahead! 😄
+        </p>
+    </div>
+</section>
+
+<section id="skills" class="skills">
+    <div class="skills-content">
+        <h5>My Skills.</h5>
+        <ul style="list-style: square;">
+            <li>C++</li>
+            <li>Python</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React.js</li>
+            <li>UX/UI Design</li>
+            <li>SQL</li>
+        </ul>
+    </div>
+
+</section>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Update the active class
+                document.querySelectorAll('.navbar a').forEach(link => {
+                    link.classList.remove('active');
+                });
+
+                this.classList.add('active');
+            });
+        });
+
+        // Update active class on scroll
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            document.querySelectorAll('.navbar a').forEach(link => {
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection.offsetTop <= scrollPosition && targetSection.offsetTop + targetSection.offsetHeight > scrollPosition) {
+                    document.querySelectorAll('.navbar a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    link.classList.add('active');
+                }
+            });
+        });
+</script>
+
 </body>
 </html>
