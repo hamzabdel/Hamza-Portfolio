@@ -31,11 +31,13 @@ body{
     font-weight: 500;
     margin-left: 35px;
     transition: .3s;
+    text-shadow: 0 0 3px black;
 }
 
 .navbar a:hover,
 .navbar a.active{
     color: #00abf0;
+    text-shadow: 0 0 3px black;
 }
 
 .home{
@@ -55,7 +57,6 @@ body{
 }
 
 .home-content h0{
-    font-family:'Courier New', Courier, monospace;
     font-size:30px;
     font-weight: 700;
     line-height: 1.2;
@@ -202,7 +203,7 @@ body{
 
 .about{
     height:100vh;
-    background-image: url('about.jpg');
+    background: #081b29;
     background-size: color;
     background-position: center;
     display: flex;
@@ -212,14 +213,15 @@ body{
 
 .about-content{
     max-width: 600px;
-    margin-left: auto;
-    margin-right: 0;
+    margin-left: 0;
+    margin-right: auto;
+    text-align: center;
 }
 
 .about h4{
     font-size: 56px;
     font-weight: 700;
-    color: #00abf0;
+    color: whitesmoke;
     line-height: 1.2;
 }
 
@@ -228,38 +230,111 @@ body{
     margin: 20px 0 40px;
 } 
 
-.skills{
+#experience{
+    margin-top: 0;
     height:100vh;
-    background-color: #3b3982;
+    background: black;
     background-size: cover;
     background-position: center;
     display: flex;
-    align-items:center;
+    align-items: center;
+    justify-content: center;
     padding: 0 10%;
 }
 
-.skills-content{
-    max-width: 600px;
-    margin-right: auto;
+.experience h6{
+    font-size: 40px;
+    text-align: center;
 }
 
-.skills h5{
-    font-size: 56px;
-    font-weight: 700;
-    color: white;
-    text-decoration: underline;
-}
-
-.skills ul{
-    padding:20px;
+.experience h7{
     font-size: 25px;
-    margin-left: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: end;
+    text-align: center;
+    margin-bottom: 200px;
+    color: #00abf0;
 }
 
-.skills li{
-    width: 50%;
-    box-sizing: border-box;
+#experience .list-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 120px;
+}
+
+.bullet-points{
+    text-align: center;
+    font-size: 40px;
+    column-count: 3;
+    column-gap: 120px;
+    list-style: none;
+}
+
+.bullet-points li{
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.bullet-points ul{
+    list-style: none;
+}
+
+.bullet-points li {
+    background: url('bulletpoint.gif') no-repeat left center;
+    background-size: 30px 30px;
+    padding-left: 30px; 
+    font-size: 40px; 
+    margin-bottom: 45px;
+}
+
+#projects{
+    margin-top: 0;
+    height:100vh;
+    background: url('projectsbg.jpg');
+    text-align: center;
+}
+
+#contact{
+    margin-top: 0;
+    height: 100vh;
+    background: #081b29;
+}
+
+.contact-menu {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 32px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    margin-bottom: 16px;
+}
+
+button {
+    padding: 12px;
+    background-color: #00abf0;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #0089bd;
 }

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
+    <title>Hamza.</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -16,8 +16,8 @@
 <nav class="navbar">
     <a href="#home" class="active">Home</a>
     <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#portfolio">Portfolio</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
 </nav>
 </header>
@@ -27,10 +27,10 @@
         <h0>hello world.</h0>
         <h1>Hamza Abdelfattah.</h1>
         <h3>Fullstack Developer</h3>
-        <p>As a junior currently attending University as an undergraduate, I am passionately pursuing
-            my goal of becoming a fullstack developer. Enthusiastic about technology in all of its facets, 
+        <p>Enthusiastic about technology in all of its facets, 
             I am dedicated to expanding my skills and knowledge to contribute meaningfully to the ever-evolving 
-            world of software development.
+            world of software development. I am passionately pursuing
+            my goal of becoming a fullstack developer. 
         </p>
         <div class="btn-box">
             <a href="#">Let's Talk</a>
@@ -63,21 +63,48 @@
     </div>
 </section>
 
-<section id="skills" class="skills">
-    <div class="skills-content">
-        <h5>My Skills.</h5>
-        <ul style="list-style: square;">
-            <li>C++</li>
-            <li>HTML</li>
-            <li>Python</li>
-            <li>JavaScript</li>
-            <li>SQL</li>
-            <li>React.js</li>
-            <li>UX/UI Design</li>
-            <li>CSS</li>
-        </ul>
+<section id="experience" class="experience">
+    <div class="list-content">
+        <h6> Skills and Databases </h6>
+        <h7>what I know so far...</h7>
+        <div class="bullet-points">
+            <ul>
+                <li> C++ </li>
+                <li> Python </li>
+                <li> JavaScript </li>
+                <li> HTML </li>
+                <li> CSS </li>
+                <li> React.js </li>
+                <li> MySQL </li>
+                <li> UX/UI Design </li>
+                <li> Swift </li>
+            </ul>
+        </div>
     </div>
+</section>
 
+<section id="projects" class="projects">
+    <div class="projects-list">
+
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="contact-menu">
+        <h2>Contact Me!</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+       
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
 </section>
 
 <script>
@@ -90,7 +117,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                     behavior: 'smooth'
                 });
 
-                // Update the active class
                 document.querySelectorAll('.navbar a').forEach(link => {
                     link.classList.remove('active');
                 });
@@ -99,7 +125,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         });
 
-        // Update active class on scroll
         window.addEventListener('scroll', () => {
             const scrollPosition = window.scrollY;
             document.querySelectorAll('.navbar a').forEach(link => {
